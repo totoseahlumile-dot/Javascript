@@ -1,0 +1,8 @@
+//let globalCount = 0;
+
+function footballStars(){
+    let footballStars = ["Messi", "Ronaldo", "Neymar", "Mbappe"];
+    for(let i = 0; i < footballStars.length; i++){
+        console.log(footballStars[i]);
+    }
+}
