@@ -1,8 +1,47 @@
-//let globalCount = 0;
+let globalCount = 0;
 
-function footballStars(){
-    let footballStars = ["Messi", "Ronaldo", "Neymar", "Mbappe"];
-    for(let i = 0; i < footballStars.length; i++){
-        console.log(footballStars[i]);
-    }
+function localScope() {
+    var localCount = 10;
+
+    console.log("Local Count: " + localCount);
+    console.log("Global Count: " + globalCount);
 }
+localScope();
+
+
+function modifyVariables() {
+    let localCount = 5;
+
+    localCount++;
+    globalCount++;
+
+    console.log("Local Count after change: " + localCount);
+    console.log("Global Count after change: " + globalCount);
+}
+modifyVariables();
+
+function Student(name, age, course) {
+    this.name = name;
+    this.age = age;
+    this.course = course;
+}
+
+let student1 = new Student("Ahlumile", 18, "Web Development");
+let student2 = new Student("Khanya", 19, "IT");
+let student3 = new Student("Sibabalwe", 20, "Computer Science");
+
+console.log(student1);
+console.log(student2);
+console.log(student3);
+
+
+let school = {
+    schoolName: "University of Cape Town",
+    address: {
+        city: "Cape Town",
+        province: "Western Cape",
+    }
+};
+
+console.log(school);
+console.log("City: " + school.address.city);
