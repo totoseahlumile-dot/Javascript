@@ -1,22 +1,19 @@
-function sum(num) {
-  // Check if value is a number
-  if (typeof num !== "number" || num % 1 !== 0) {
+function sum(x) {
+  if (typeof x !== "number" || x % 1 !== 0) {
     return "The value passed is not a number";
   }
 
   let total = 0;
 
-  for (let i = 0; i <= num; i++) {
+  for (let i = 0; i <= x; i++) {
     total += i;
   }
 
   return total;
 }
 
-// Tests
-console.log(sum(5)); // 15
-console.log(sum(10)); // 55
-console.log(sum("5")); // The value passed is not a number
+console.log(sum(5)); 
+
 
 function factorial(num) {
   let result = 1;
@@ -27,10 +24,8 @@ function factorial(num) {
 
   return result;
 }
-
-// Tests
-console.log(factorial(4)); // 24
-console.log(factorial(5)); // 120
+console.log(factorial(4)); 
+console.log(factorial(5))
 
 function funkyMath(a, b, c, d) {
   if (arguments.length === 2) {
@@ -48,10 +43,8 @@ function funkyMath(a, b, c, d) {
   return "Invalid number of arguments";
 }
 
-// Tests
-console.log(funkyMath(8, 2)); // 6
-console.log(funkyMath(1, 2, 3)); // 6
-console.log(funkyMath(8, 2, 3, 5)); // 1.25
+
+console.log(funkyMath(8, 2)); 
 
 let numbers = [1, 2, 33, 45, 6, 44];
 
@@ -63,7 +56,6 @@ for (let i = 0; i < numbers.length; i++) {
   }
 }
 
-// Arrange from smallest to biggest
 oddNumbers.sort(function (a, b) {
   return a - b;
 });
