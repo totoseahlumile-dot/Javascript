@@ -55,11 +55,6 @@ for (let i = 0; i < numbers.length; i++) {
     oddNumbers.push(numbers[i]);
   }
 }
-
-oddNumbers.sort(function (a, b) {
-  return a - b;
-});
-
 console.log("Odd Numbers:", oddNumbers);
 
 let me = {
