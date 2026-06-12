@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Profile Card</title>
+</head>
+<body>
+
+    <style>
+        .active-status {
+            background-color: #14cd1d;
+            border: 2px solid #0a0d12;
+            border-radius: 12px;
+            padding: 16px;
+        }
+    </style>
+
+    <div id="profileCard">
+        <img id="profileImage" src="https://t3.ftcdn.net/jpg/08/05/28/22/360_F_805282248_LHUxw7t2pnQ7x8lFEsS2IZgK8IGFXePS.jpg" style="height: 10rem;width: 10rem;" alt="Profile Image">
+        <h2 id="profileName">Ozinho Junior</h2>
+        <p id="profileRole">Software Developer</p>
+        <p id="profileBio">Passionate about coding and learning new technologies.</p> 
+        <button id="updateNameBtn">Update Name</button>
+        <button id="updateRoleBtn">Update Role</button>
+        <button id="toggleStatusBtn">Toggle Active Status</button>
+        <button id="changeImageBtn">Change Image</button>
+
+    </div>
+    
+    <script>
+
+        changeImageBtn.addEventListener('click', function() {
+            const newImageUrl = prompt("Enter image URL:");
+            if (newImageUrl) {
+                profileImage.src = newImageUrl;
+            }
+        });
+        updateNameBtn.addEventListener('click', function() {
+            const newName = prompt("Enter new name:");
+            if (newName) {
+                profileName.textContent = newName;
+            }
+        });
+        updateRoleBtn.addEventListener('click', function() {
+            const newRole = prompt("Enter new role:");
+            if (newRole) {
+                profileRole.textContent = newRole;
+            }
+        });
+        toggleStatusBtn.addEventListener('click', function() {
+            if (profileCard.classList.contains('active-status')) {
+                profileCard.classList.remove('active-status');
+                toggleStatusBtn.textContent = "Toggle Active Status";
+            } else {
+                profileCard.classList.add('active-status');
+                toggleStatusBtn.textContent = "Deactivate Profile";
+            }
+        });    
+    </script>
+    
+</body>
+</html>
